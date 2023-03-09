@@ -1,0 +1,20 @@
+// working - fix task sid (right now every service have the same id)
+- change method of company id's, do it like tasks or array.length
+
+- Make interface to modify status of added services
+//working- create page where you can see details of service
+- task page, create method to let report given service
+    - create reducer which contain 3 arrays to contain active,history, all tasks
+    - task main page should contain actual list of tasks, make possible pagination
+    
+
+
+
+
+
+
+
+
+Changes to be made from orginal:
+- Let delete services, deleted services will be stored and separated from active/ongoing
+- this can be made by making copy of companies

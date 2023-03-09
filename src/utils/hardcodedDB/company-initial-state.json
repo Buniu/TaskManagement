@@ -1,0 +1,29 @@
+[
+    {"id":0,
+    "name":"Agata",
+    "nip":"3375706276",
+    "address":"Dąbrowa Górnicza ul. Korczaka Janusza 95",
+    "supervisor":"",
+    "services":[]
+    },
+    {
+    "id":1,"name":"Januszeks",
+    "nip":"7589360937",
+    "address":"Jaworzno ul. Brzozowa 125",
+    "supervisor":"",
+    "services":[]
+    },{
+    "id":2,
+    "name":"Kremuwkojad",
+    "nip":"4972455316",
+    "address":"Olsztyn ul. Żurawskiego Stanisława 124",
+    "supervisor":"",
+    "services":[]
+    },{
+    "id":3,
+    "name":"Kasztany S.A",
+    "nip":"9524392806",
+    "address":"Kielce ul. Kordeckiego Augustyna 116",
+    "supervisor":"",
+    "services":[]
+    }]

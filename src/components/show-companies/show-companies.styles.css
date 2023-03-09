@@ -1,0 +1,14 @@
+.list-companies {
+    display: flex;
+    flex-direction: column;
+}
+.list-companies-company-element {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.list-companies-company-property{
+    border: black solid 1px;
+    padding: 5px;
+}

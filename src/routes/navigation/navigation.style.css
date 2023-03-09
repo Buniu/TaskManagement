@@ -1,0 +1,10 @@
+.navigation-container {
+    display: flex;
+    height: 20px;
+    justify-content: center;
+    margin-bottom: 25px;
+    width: 100%;
+}
+.navigation-link {
+    padding: 10px;
+}
