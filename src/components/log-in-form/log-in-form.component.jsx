@@ -1,12 +1,16 @@
-import { selectUsersArray } from "../../store/users/users.selector"
-import { useSelector } from "react-redux"
+import { useSelector,useDispatch } from "react-redux"
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
+
+import { selectUsersArray } from "../../store/users/users.selector"
+import { setLoggedUser } from "../../store/users/users.action"
 
 const LogInForm = () => {
     const usersArray = useSelector(selectUsersArray)
     const [userForm,setUserForm] = useState({login:'',password:''})
-
-
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
+    console.log(navigate)
     const onChangeHandler = (event) => {
         const {value, className} = event.target
 
@@ -20,8 +24,11 @@ const LogInForm = () => {
     const loginHandler = (event) => {
         event.preventDefault()
         const userFromDB = usersArray.find((user => user.login === userForm.login))
-        if(userFromDB.password === userForm.password)
-            console.log('logged in todo')
+        if(userFromDB.password === userForm.password) {
+            dispatch(setLoggedUser(userFromDB))
+            setUserForm({login:'',password:''})
+            navigate('/')
+        }
         else
             console.log('wrong password')
         

@@ -3,6 +3,7 @@ import Navigation from './routes/navigation/navigation.route';
 import Home from './components/home/home.component';
 import CustomerPage from './routes/customer-page/customer-page.component';
 import TaskCenter from './routes/task-center/task-center.component';
+import LogInPage from './routes/log-in-page/log-in-page.component';
 
 import './App.css';
 
@@ -12,7 +13,8 @@ function App() {
       <Route path='/' element={<Navigation/>} >
         <Route index element={<Home/>}/>
         <Route path='/customer-page/*' element={<CustomerPage/>}/>
-        <Route path='/task-center' element={<TaskCenter/>} />
+        <Route path='/task-center' element={<TaskCenter/>}/>
+        <Route path='/log-in-page' element={<LogInPage/>}/>
       </Route>
 
 

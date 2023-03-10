@@ -7,3 +7,8 @@ export const selectUsersArray = createSelector(
     [selectUsersReducer],
     (usersSlice) => usersSlice.users
 )
+
+export const selectLoggedUser = createSelector(
+    [selectUsersReducer],
+    (usersSlice) => usersSlice.loggedUser
+)
