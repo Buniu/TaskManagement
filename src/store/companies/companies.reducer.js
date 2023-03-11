@@ -46,8 +46,8 @@ export const companiesReducer = (state = COMPANIES_INITIAL_STATE, action = {}) =
         {
             const {id, newService} = payload
             const servicesSID = state.servicesSID
-            const newCompaniesList = state.companiesList.map((item,index)=> {
-                if(index === id) {
+            const newCompaniesList = state.companiesList.map((item)=> {
+                if(item.id === id) {
                     return {
                         ...item,
                         services : [...item.services, newService]
@@ -57,6 +57,25 @@ export const companiesReducer = (state = COMPANIES_INITIAL_STATE, action = {}) =
             })
             console.log(servicesSID)
             return {...state, companiesList:newCompaniesList,servicesSID: servicesSID+1}
+        }
+
+        case(COMPANIES_ACTION_TYPES.ADD_SUPERVISOR): 
+        {
+            const {user, companyId} = payload
+            const newCompaniesList = state.companiesList.map ((item) => {
+                if(item.id ===companyId) {
+                    return {
+                        ...item,
+                        supervisor: {id: user.id,
+                            name: user.name,
+                            surname: user.surname,
+                            }
+                    }
+                }
+                return item
+            })
+            console.log(newCompaniesList)
+            return {...state,companiesList: newCompaniesList}
         }
 
         default:

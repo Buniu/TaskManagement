@@ -1,13 +1,53 @@
 .navigation-container {
     display: flex;
-    height: 20px;
+    height: 40px;
     justify-content: center;
     margin-bottom: 25px;
     width: 100%;
+    top: 0;
+    left:0;
+    z-index: 10;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
 }
+
+.navigation-links {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
 .navigation-link {
-    padding: 10px;
+    padding: 0.25rem;
+    text-decoration: none;
+    font-weight: bold;
+    color: bisque;
 }
+.navigation-link:hover, .navigation-link:active {
+    color:white
+}
+
+.navigation--login-link {
+    padding: 0.25rem;
+    color:white;
+    background-color: red;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 0.2rem;
+    margin-left: 8px;
+}
+.navigation--login-link:hover, .navigation--login-link:active {
+    color:red;
+    background-color: white;
+}
+.navigation-logged-user {
+    font-weight: bold;
+    color:red;
+    padding: 0.25rem;
+}
+
 
 .nagivation-logout-button {
     color: blue

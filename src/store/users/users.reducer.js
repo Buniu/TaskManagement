@@ -8,7 +8,7 @@ const USERS_INITIAL_STATE = {
            surname: 'Satro',
            role: 'admin', // admin,supervisor,technician
            login: 'nsatro',
-           password: 'nsatro123!'
+           password: '1'
         },
         {
            id:1,
@@ -82,7 +82,6 @@ export const usersReducer = (state = USERS_INITIAL_STATE, action= {}) => {
     const {type,payload} = action
     switch(type) {
         case(USERS_ACTION_TYPES.SET_ACTIVE_USER):
-        console.log(payload)
         return {...state, loggedUser: payload}
         default:
             return state

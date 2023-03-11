@@ -18,8 +18,6 @@ const AddServiceForm= ({company}) => {
     }
     const [newService,setNewService] = useState(SERVICE_TEMPLATE)
 
-    console.log(serviceSID)
-
     const inputChange = (event) =>{
         const {value, className, validity} = event.target
 

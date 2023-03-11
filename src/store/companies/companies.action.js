@@ -11,3 +11,7 @@ export const addCompanyToRedux = (companies, companyToAdd) => {
 export const addServiceToCompany = (id, newService) => {
         return createAction(COMPANIES_ACTION_TYPES.ADD_SERVICE, {id,newService})
 }
+
+export const addSupervisorToCompany = (user,companyId) => {
+        return createAction(COMPANIES_ACTION_TYPES.ADD_SUPERVISOR, {user,companyId})
+}

@@ -15,13 +15,15 @@ const Navigation = () => {
     return (
         <>
         <div className="navigation-container">
-            <Link className="navigation-link" to='/'> Main Page</Link>
-            <Link className="navigation-link" to='/customer-page'> Customer Page</Link>
-            <Link className="navigation-link" to='/task-center'> Task Page</Link>
+            <nav className="navigation-links">
+                <Link className="navigation-link" to='/'> Main Page</Link>
+                <Link className="navigation-link" to='/customer-page'> Customer Page</Link>
+                <Link className="navigation-link" to='/task-center'> Task Page</Link>
+            </nav>
             {Object.keys(loggedUser).length !==0 ?
-                 (<div className='navigation-link'>Zalogowany {loggedUser.name} {loggedUser.surname}
-                    <span className='nagivation-logout-button' onClick={logoutHandler}> Wyloguj się</span>
-                 </div>) : (<Link className="navigation-link" to="/log-in-page">Zaloguj się</Link>)}
+                 (<div className='navigation-logged-user'>{loggedUser.name} {loggedUser.surname}
+                    <span className='navigation--login-link' onClick={logoutHandler}> Logout</span>
+                 </div>) : (<Link className="navigation--login-link" to="/log-in-page">Log In</Link>)}
 
         </div>
         <Outlet/>

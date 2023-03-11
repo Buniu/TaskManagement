@@ -10,7 +10,6 @@ const LogInForm = () => {
     const [userForm,setUserForm] = useState({login:'',password:''})
     const dispatch = useDispatch()
     const navigate = useNavigate()
-    console.log(navigate)
     const onChangeHandler = (event) => {
         const {value, className} = event.target
 
@@ -27,7 +26,7 @@ const LogInForm = () => {
         if(userFromDB.password === userForm.password) {
             dispatch(setLoggedUser(userFromDB))
             setUserForm({login:'',password:''})
-            navigate('/')
+            navigate('/') //redirecting to main page
         }
         else
             console.log('wrong password')
