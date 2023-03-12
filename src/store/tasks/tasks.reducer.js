@@ -1,5 +1,15 @@
 import { TASKS_ACTION_TYPES } from "./tasks.types";
 
+
+// const taskObjectPrototype = {
+//     id: 0,
+//     type: '',
+
+// }
+
+
+
+
 const TASKS_INITIAL_STATE = {
     tasks: [],
     tasksArchive: [],

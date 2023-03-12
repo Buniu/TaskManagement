@@ -6,6 +6,7 @@ const SupervisorHomePanel = ({loggedUser}) => {
         <div className="supervisor-panel-container">
             <div> Supervisor home panel</div>
             <AddCompanyForm/>
+            
         </div>
     )
 }

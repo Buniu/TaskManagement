@@ -1,3 +1,6 @@
+import './service-page.styles.css'
+import { Link } from 'react-router-dom'
+
 import { useParams } from "react-router-dom"
 import { selectCompanyById } from "../../store/companies/companies.selector"
 import { useSelector } from "react-redux"
@@ -14,6 +17,8 @@ const ServicePage = () => {
             <h3> Status: {status}</h3>
             <label className="service-page-property">Company name: {name}</label>
             <label> Monthly Cost: {monthlyCost} </label>
+            <Link>Order Configuration</Link>
+            <Link>Open Trouble Ticket</Link>
         </div>
     )
 }

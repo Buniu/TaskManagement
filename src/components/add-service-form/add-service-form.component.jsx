@@ -43,6 +43,7 @@ const AddServiceForm= ({company}) => {
 
     return (
         <div className='add-service-container'>
+            <div>TODO Strict this functionality for supervisors only, and at best only to supervisor that take care of company</div>
             <h2> Add new service to customer: {company.name}</h2>
 
             <form className='add-service-form' onSubmit={addServiceHandler}>

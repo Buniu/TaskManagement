@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom"
+
+
 import { selectLoggedUser } from "../../store/users/users.selector"
 import { useSelector } from "react-redux"
 
@@ -18,23 +21,26 @@ const Home = () => {
     const renderComponentByUserType = () => {
         switch(userRole) {
             case(userTypes.admin):
-                return <AdminHomePanel/>
+                return <AdminHomePanel loggedUser={loggedUser}/>
             case(userTypes.supervisor):
-                return <SupervisorHomePanel/>
+                return <SupervisorHomePanel loggedUser={loggedUser}/>
             case(userTypes.technician):
-                return <TechnicianHomePanel/>
+                return <TechnicianHomePanel loggedUser={loggedUser}/>
             default:
                 return <div>something went wrong</div>
             }
         }
             
 
+        const testValue = '1'
+        const testString = 'configuration'
+
     return (
         <div> 
          {isUserLoggedIn ? renderComponentByUserType() :
             <div>To show user module you need to log in</div> 
             }
-
+            <Link to={`/task-center/createTask/${testString}/${testValue}`}>Test routing</Link>
         </div>
     )
 }

@@ -1,34 +1,6 @@
 import { COMPANIES_ACTION_TYPES } from "./companies.types"
 
-const INITIAL_ARRAY = [
-    {"id":0,
-    "name":"Agata",
-    "nip":"3375706276",
-    "address":"Dąbrowa Górnicza ul. Korczaka Janusza 95",
-    "supervisor":"",
-    "services":[]
-    },
-    {
-    "id":1,"name":"Januszeks",
-    "nip":"7589360937",
-    "address":"Jaworzno ul. Brzozowa 125",
-    "supervisor":"",
-    "services":[]
-    },{
-    "id":2,
-    "name":"Kremuwkojad",
-    "nip":"4972455316",
-    "address":"Olsztyn ul. Żurawskiego Stanisława 124",
-    "supervisor":"",
-    "services":[]
-    },{
-    "id":3,
-    "name":"Kasztany S.A",
-    "nip":"9524392806",
-    "address":"Kielce ul. Kordeckiego Augustyna 116",
-    "supervisor":"",
-    "services":[]
-    }]
+const INITIAL_ARRAY = [{"id":0,"name":"Agata","nip":"3375706276","address":"Dąbrowa Górnicza ul. Korczaka Janusza 95","supervisor":{"id":1,"name":"Ludwik","surname":"Brychcy"},"services":[{"sid":0,"name":"Data Transmision 100/100","status":"To Be Configured","monthlyCost":"500"},{"sid":1,"name":"Collocation","status":"To Be Configured","monthlyCost":"250"}]},{"id":1,"name":"Januszeks","nip":"7589360937","address":"Jaworzno ul. Brzozowa 125","supervisor":"","services":[]},{"id":2,"name":"Kremuwkojad","nip":"4972455316","address":"Olsztyn ul. Żurawskiego Stanisława 124","supervisor":"","services":[]},{"id":3,"name":"Kasztany S.A","nip":"9524392806","address":"Kielce ul. Kordeckiego Augustyna 116","supervisor":"","services":[]}]
 
 const COMPANIES_INITIAL_STATE = {
     companiesList: INITIAL_ARRAY,

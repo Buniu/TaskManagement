@@ -9,7 +9,7 @@ const ShowCompanyServices = ({company}) => {
         <div>
             {services.map((service)=> {
                 return (
-                    <div key={service.id} className="service-container">
+                    <div key={service.sid} className="service-container">
                         <div> Service Status: {service.status}</div>
                         <Link to={`/customer-page/${id}/${service.sid}`}> Service Name: {service.name}</Link>
 

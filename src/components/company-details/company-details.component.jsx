@@ -7,7 +7,7 @@ const CompanyDetails = ({company}) => {
         <label className="list-companies-company-property">Company name: {name}</label>
         <label className="list-companies-company-property">Company Address: {address}</label>
         <label className="list-companies-company-property">NIP: {nip}</label>
-        <label className="list-companies-company-property">Supervisor: {supervisor}</label>
+        <label className="list-companies-company-property">Supervisor: {supervisor.name} {supervisor.surname} </label>
     </div>
     )
 }
