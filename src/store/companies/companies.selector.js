@@ -25,8 +25,19 @@ export const selectCompaniesId = createSelector (
 
 export const selectCompanyById = createSelector (
     [selectCompaniesReducer, (_, companyId)=> companyId],
-    (companies, companyId) => {
-        console.log(companies)
-        return companies.companiesList.find(company => company.id === Number(companyId))
+    (companiesSlice, companyId) => {
+        console.log(companiesSlice)
+        return companiesSlice.companiesList.find(company => company.id === Number(companyId))
+    }
+)
+
+export const selectCompanyBySid = createSelector (
+    [selectCompaniesReducer, (_, serviceSid) => serviceSid],
+    (companiesSlice, serviceSid) => {
+        const service = companiesSlice.companiesList.find (company =>  {
+            const service = company.services.find(service => service.sid === Number(serviceSid)) 
+            return service.sid ===Number(serviceSid)
+        })
+        return service
     }
 )

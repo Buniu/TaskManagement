@@ -1,0 +1,19 @@
+.create-task-page {
+    display: flex;
+    flex-direction: column;
+}
+.create-task-ticket-data {
+    display: flex;
+    justify-items:center;
+    justify-content: center;
+
+}
+.create-task-ticket-data > label {
+    padding: 20px;
+}
+
+.create-task-creator {
+    display: flex;
+    justify-items:center;
+    justify-content: center;
+}

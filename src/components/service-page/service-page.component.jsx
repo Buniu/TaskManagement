@@ -11,13 +11,18 @@ const ServicePage = () => {
     const company = useSelector(state =>selectCompanyById(state,companyId))
     .services.find(service => service.sid === Number(serviceId))
     const {sid,name,monthlyCost,status} = company
+
+    const taskTypes = {
+        configuration: 'configuration',
+        troubleTicket: 'troubleTicket',
+    }
     
     return (
         <div className="service-page-container"  key={sid}>
             <h3> Status: {status}</h3>
             <label className="service-page-property">Company name: {name}</label>
             <label> Monthly Cost: {monthlyCost} </label>
-            <Link>Order Configuration</Link>
+            <Link to={`/task-center/createTask/${taskTypes.configuration}/${serviceId}`}>Order Configuration</Link>
             <Link>Open Trouble Ticket</Link>
         </div>
     )
