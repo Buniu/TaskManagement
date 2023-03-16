@@ -1,4 +1,4 @@
-import AddServiceForm from "../add-service-form/add-service-form.component"
+import AddServiceForm from "../AddServiceForm/addServiceForm.component"
 
 
 const ModifyCompany = ({company}) => {

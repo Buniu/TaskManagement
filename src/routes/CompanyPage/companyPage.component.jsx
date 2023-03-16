@@ -3,9 +3,9 @@ import { useParams } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { useState } from 'react'
 import { selectCompaniesList, selectCompanyById } from '../../store/companies/companies.selector'
-import CompanyDetails from '../../components/company-details/company-details.component'
-import ModifyCompany from '../../components/modify-company/modify-company.component'
-import ShowCompanyServices from '../../components/show-company-services/show-company-services.component'
+import CompanyDetails from '../../components/CompanyDetails/companyDetails.component'
+import ModifyCompany from '../../components/ModifyCompany/modifyCompany.component'
+import ShowCompanyServices from '../../components/ShowCompanyServices/showCompanyServices.component'
 
 const CompanyPage = () => {
     const {companyId} = useParams()

@@ -4,9 +4,9 @@ import { Link } from "react-router-dom"
 import { selectLoggedUser } from "../../store/users/users.selector"
 import { useSelector } from "react-redux"
 
-import SupervisorHomePanel from "../supervisor-home-panel/supervisor-home-panel.component"
-import AdminHomePanel from "../admin-home-panel/admin-home-panel.component"
-import TechnicianHomePanel from "../technician-home-panel/technician-home-panel.component"
+import SupervisorHomePanel from "../SupervisorHomePanel/supervisorHomePanel.component"
+import AdminHomePanel from "../AdminHomePanel/adminHomePanel.component"
+import TechnicianHomePanel from "../TechnicianHomePanel/technicianHomePanel.component"
 
 const Home = () => {
     const loggedUser = useSelector(selectLoggedUser)

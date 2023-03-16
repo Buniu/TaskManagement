@@ -1,4 +1,4 @@
-import AddCompanyForm from "../add-company-form/add-company-form.component"
+import AddCompanyForm from "../AddCompanyForm/addCompanyForm.component"
 
 const SupervisorHomePanel = ({loggedUser}) => {
     

@@ -1,4 +1,4 @@
-import SetSupervisorDropdown from "../set-supervisor-dropdown/set-supervisor-dropdown.component"
+import SetSupervisorDropdown from "../SetSupervisorDropdown/setSupervisorDropdown.component"
 
 
 const AdminHomePanel = ({loggedUser}) => {
