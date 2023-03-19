@@ -1,4 +1,4 @@
-import './company-page.styles.css'
+import './companyPage.styles.css'
 import { useParams } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { useState } from 'react'

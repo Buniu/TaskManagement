@@ -1,7 +1,7 @@
 import { Route,Routes } from "react-router-dom"
-import CompanyPage from "../company-page/company-page.component"
-import ShowCompanies from "../../components/show-companies/show-companies.component"
-import ServicePage from "../../components/service-page/service-page.component"
+import CompanyPage from "../CompanyPage/companyPage.component"
+import ShowCompanies from "../../components/ShowCompanies/showCompanies.component"
+import ServicePage from "../../components/ServicePage/servicePage.component"
 
 const CustomerPage = () => {
     return (

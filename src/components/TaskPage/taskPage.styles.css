@@ -1,0 +1,23 @@
+.task-page-tasks {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+}
+
+.task-page-label {
+    display: flex;
+    margin:0 13px;
+    padding: 0;
+    justify-content: space-between;
+    justify-self: flex-start;
+}
+
+.task-page-task {
+    display: flex;
+    margin: 10px;
+    border: black solid 2px;
+    padding: 8px;
+    justify-content: space-between;
+    justify-self: flex-start;
+}

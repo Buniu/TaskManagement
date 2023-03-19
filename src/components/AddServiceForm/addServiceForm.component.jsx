@@ -1,4 +1,4 @@
-import './add-service-form.styles.css'
+import './addServiceForm.styles.css'
 
 import { useState } from 'react'
 import {addServiceToCompany} from '../../store/companies/companies.action'

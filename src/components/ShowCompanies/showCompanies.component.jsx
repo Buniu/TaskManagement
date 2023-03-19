@@ -2,7 +2,7 @@ import { selectCompaniesList } from "../../store/companies/companies.selector"
 import { useSelector } from "react-redux"
 import { Link } from "react-router-dom"
 
-import "./show-companies.styles.css"
+import "./showCompanies.styles.css"
 
 const ShowCompanies = () => {
 
