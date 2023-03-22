@@ -4,6 +4,8 @@ import { useSelector, useDispatch } from "react-redux"
 import { selectLoggedUser } from "../../store/users/users.selector"
 import { setLoggedUser } from "../../store/users/users.action"
 
+import Footer from "../../components/Footer/footer.component"
+
 const Navigation = () => {
     const loggedUser = useSelector(selectLoggedUser)
     const dispatch = useDispatch()
@@ -27,6 +29,7 @@ const Navigation = () => {
 
         </div>
         <Outlet/>
+        <Footer/>
         </>
     )
 }
