@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom"
-
+import { persistor } from "../../store/store"
 
 import { selectLoggedUser } from "../../store/users/users.selector"
 import { useSelector } from "react-redux"
@@ -35,12 +34,17 @@ const Home = () => {
         const testValue = '1'
         const testString = 'configuration'
 
+        const emergencyButtonHandler = () => {
+            persistor.purge()
+        }
+
     return (
         <div> 
          {isUserLoggedIn ? renderComponentByUserType() :
             <div>To show user module you need to log in</div> 
             }
-            <Link to={`/task-center/createTask/${testString}/${testValue}`}>Test routing</Link>
+            <button onClick={emergencyButtonHandler}> emergency persist delete</button>
+
         </div>
     )
 }

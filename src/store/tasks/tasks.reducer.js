@@ -16,5 +16,33 @@ export const tasksReducer = (state = TASKS_INITIAL_STATE, action= {}) => {
         return {...state, tasks: payload}
         default:
             return state
+        case(TASKS_ACTION_TYPES.ADD_COMMENT): {
+            const {taskId, comment} = payload
+            const newTasksList = state.tasks.map((task)=> {
+                if(Number(task.id) === Number(taskId)){
+                    return {...task,comments: [...task.comments,comment]}
+                }
+                return task
+            })
+            return {...state,tasks: newTasksList}
+        }
+        case(TASKS_ACTION_TYPES.SET_ASSIGNEDTECHNICIAN): {
+            const {taskId, technician} = payload
+            const newTasksList = state.tasks.map((task)=> {
+                if(Number(task.id) === Number(taskId)){
+                    return {...task,assignedTechnician: technician}
+                }
+                return task
+            })
+            return {...state,tasks: newTasksList}
+        }
     }
 }
+
+/*
+Technician object {
+    name:
+    surname:
+    id:
+}
+*/

@@ -32,7 +32,8 @@ const CreateTaskPage = () => {
             date: new Date(),
             content: ''
         }],
-        sid: serviceSid
+        sid: serviceSid,
+        connectedCasesId: ['todo, ability to connect cases together']
     })
 
     
@@ -68,7 +69,8 @@ const CreateTaskPage = () => {
                 date: new Date(),
                 content: ''
             }],
-            sid: serviceSid
+            sid: serviceSid,
+            connectedCasesId: ['todo, ability to connect cases together']
         })
     }
     
