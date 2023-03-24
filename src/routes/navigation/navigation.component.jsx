@@ -11,7 +11,7 @@ const Navigation = () => {
     const dispatch = useDispatch()
 
     const logoutHandler = () => {
-        dispatch(setLoggedUser({}))
+        dispatch(setLoggedUser(false))
     }
 
     return (

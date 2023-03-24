@@ -55,11 +55,6 @@ const TaskDetails = () => {
     }
 
     const changeAssignedTechnicianToTask = () => {
-        console.log({
-            id: selectedUser.id,
-            name: selectedUser.id,
-            surname: selectedUser.surname
-        })
 
         dispatch(assignTechnicianToTask(taskId, {
             id: selectedUser.id,

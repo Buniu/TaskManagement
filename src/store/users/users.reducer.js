@@ -75,7 +75,7 @@ const USERS_INITIAL_STATE = {
            password: 'test123!'
         },
     ],
-    loggedUser: {}
+    loggedUser: false
 }
 
 export const usersReducer = (state = USERS_INITIAL_STATE, action= {}) => {
